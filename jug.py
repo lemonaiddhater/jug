@@ -98,7 +98,7 @@ SPIN = ["⠋","⠙","⠹","⠸","⠼","⠴","⠦","⠧","⠇","⠏"]
 def clr():  os.system("cls" if platform.system()=="Windows" else "clear")
 def pause(): input(f"\n{GY}  [{LGY}ENTER{GY}] to continue...{RST}")
 def rnd(a,b): return random.randint(a,b)
-def fake_ip(): return f"{rnd(24,220)}.{rnd(1,254)}.{rnd(1,254)}.{rnd(1,254)}"
+def call_ip(): return f"{rnd(24,220)}.{rnd(1,254)}.{rnd(1,254)}.{rnd(1,254)}"
 
 JUG_LOCS = [
     "New York, US • AS7922 Comcast","Los Angeles, US • AS15169 Google LLC",
@@ -145,6 +145,287 @@ JUG_LOCS = [
     "Edmonton, CA • AS6327 Shaw",
     "Winnipeg, CA • AS7122 Shaw",
     "Quebec City, CA • AS5769 Videotron",
+    "Portland, US • AS54321 Frontier",
+    "London, UK • AS2856 BT Group",
+    "Tokyo, JP • AS4713 NTT",
+    "Toronto, CA • AS577 Bell Canada",
+    "Amsterdam, NL • AS1101 SURF",
+    "Frankfurt, DE • AS3320 Deutsche Telekom",
+    "Los Angeles, US • AS15169 Google LLC",
+    "Sydney, AU • AS1221 Telstra",
+    "Chicago, US • AS7018 AT&T",
+    "Seoul, KR • AS4766 KT Corp",
+    "Vancouver, CA • AS852 Telus",
+    "Miami, US • AS7922 Comcast",
+    "Paris, FR • AS3215 Orange",
+    "New York, US • AS7922 Comcast",
+    "Melbourne, AU • AS4804 Optus",
+    "San Jose, US • AS54600 Frontier",
+    "Brisbane, AU • AS7474 iiNet",
+    "Las Vegas, US • AS22773 Cox Communications",
+    "Montreal, CA • AS5769 Videotron",
+    "Seoul, KR • AS4766 KT Corp",
+    "Boston, US • AS3 MIT",
+    "Perth, AU • AS4764 Internode",
+    "Seattle, US • AS16509 Amazon AWS",
+    "Frankfurt, DE • AS3320 Deutsche Telekom",
+    "Vancouver, CA • AS852 Telus",
+    "Las Vegas, US • AS22773 Cox Communications",
+    "London, UK • AS2856 BT Group",
+    "San Diego, US • AS20001 Charter",
+    "Geneva, CH • AS3303 Swisscom",
+    "Portland, US • AS7922 Comcast",
+    "Los Angeles, US • AS15169 Google LLC",
+    "Madrid, ES • AS12956 Telefonica",
+    "Melbourne, AU • AS4804 Optus",
+    "Tokyo, JP • AS4713 NTT",
+    "Toronto, CA • AS5769 Videotron",
+    "Seoul, KR • AS4766 KT Corp",
+    "Frankfurt, DE • AS3320 Deutsche Telekom",
+    "Vancouver, CA • AS852 Telus",
+    "Miami, US • AS7922 Comcast",
+    "London, UK • AS2856 BT Group",
+    "Chicago, US • AS7018 AT&T",
+    "New York, US • AS7922 Comcast",
+    "Paris, FR • AS3215 Orange",
+    "Brisbane, AU • AS7474 iiNet",
+    "Seattle, US • AS16509 Amazon AWS",
+    "Los Angeles, US • AS15169 Google LLC",
+    "Montreal, CA • AS5769 Videotron",
+    "Tokyo, JP • AS4713 NTT",
+    "Philadelphia, US • AS7922 Comcast",
+    "Las Vegas, US • AS22773 Cox Communications",
+    "San Jose, US • AS54600 Frontier",
+    "Melbourne, AU • AS4804 Optus",
+    "London, UK • AS2856 BT Group",
+    "Dallas, US • AS11427 TWC",
+    "Vancouver, CA • AS852 Telus",
+    "Portland, US • AS7922 Comcast",
+    "Seoul, KR • AS4766 KT Corp",
+    "Frankfurt, DE • AS3320 Deutsche Telekom",
+    "New York, US • AS7922 Comcast",
+    "Miami, US • AS209 CenturyLink",
+    "Las Vegas, US • AS22773 Cox Communications",
+    "Chicago, US • AS7018 AT&T",
+    "Seattle, US • AS16509 Amazon AWS",
+    "London, UK • AS2856 BT Group",
+    "Tokyo, JP • AS4713 NTT",
+    "Los Angeles, US • AS15169 Google LLC",
+    "Vancouver, CA • AS852 Telus",
+    "San Diego, US • AS20001 Charter",
+    "Melbourne, AU • AS4804 Optus",
+    "Portland, US • AS7922 Comcast",
+    "Frankfurt, DE • AS3320 Deutsche Telekom",
+    "Montreal, CA • AS5769 Videotron",
+    "Las Vegas, US • AS22773 Cox Communications",
+    "Philadelphia, US • AS7922 Comcast",
+    "Miami, US • AS209 CenturyLink",
+    "Chicago, US • AS7018 AT&T",
+    "Seoul, KR • AS4766 KT Corp",
+    "Vancouver, CA • AS852 Telus",
+      "Austin, US • AS54321 Frontier",
+    "Berlin, DE • AS3320 Deutsche Telekom",
+    "Madrid, ES • AS12956 Telefonica",
+    "Hong Kong, HK • AS58453 HKT Limited",
+    "Madrid, ES • AS12956 Telefonica",
+    "Vienna, AT • AS12301 Magenta Telekom",
+    "Brussels, BE • AS3301 Belgacom",
+    "Dublin, IE • AS1563 Eircom",
+    "Singapore, SG • AS3758 SingNet",
+    "Bangkok, TH • AS38236 AIS",
+    "Jakarta, ID • AS136138 Telkom Indonesia",
+    "Lagos, NG • AS37864 MTN Nigeria",
+    "Cairo, EG • AS8452 Telecom Egypt",
+    "Sao Paulo, BR • AS26615 TIM Brasil",
+    "Rio de Janeiro, BR • AS26615 TIM Brasil",
+    "Johannesburg, ZA • AS36939 Telkom SA",
+    "Kuala Lumpur, MY • AS4788 TMNet",
+    "Helsinki, FI • AS1955 Elisa",
+    "Stockholm, SE • AS1257 Telia Company",
+    "Oslo, NO • AS2116 Telenor",
+    "Copenhagen, DK • AS8714 TDC",
+    "Hanoi, VN • AS8522 VNPT",
+    "Manila, PH • AS1764 PLDT",
+    "Bangkok, TH • AS38236 AIS",
+    "Krakow, PL • AS5603 Orange Polska",
+    "Budapest, HU • AS12956 Magyar Telekom",
+    "Prague, CZ • AS28307 O2 Czech Republic",
+    "Warsaw, PL • AS5603 Orange Polska",
+    "Athens, GR • AS8344 Cosmote",
+    "Lisbon, PT • AS12318 MEO",
+    "Madrid, ES • AS12956 Telefonica",
+    "Riga, LV • AS12578 Lattelecom",
+    "Vilnius, LT • AS6842 Telia Lietuva",
+    "Tallinn, EE • AS3301 Telia Eesti",
+    "Helsinki, FI • AS1955 Elisa",
+    "Amsterdam, NL • AS1101 SURFnet",
+    "Brussels, BE • AS3301 Belgacom",
+    "Copenhagen, DK • AS8714 TDC",
+    "Stockholm, SE • AS1257 Telia Company",
+    "Oslo, NO • AS2116 Telenor",
+    "Helsinki, FI • AS1955 Elisa",
+    "Vienna, AT • AS12301 Magenta Telekom",
+    "Budapest, HU • AS12956 Magyar Telekom",
+    "Prague, CZ • AS28307 O2 Czech Republic",
+    "Warsaw, PL • AS5603 Orange Polska",
+    "Athens, GR • AS8344 Cosmote",
+    "Lisbon, PT • AS12318 MEO",
+    "Hanoi, VN • AS8522 VNPT",
+    "Manila, PH • AS1764 PLDT",
+    "Jakarta, ID • AS136138 Telkom Indonesia",
+    "Lagos, NG • AS37864 MTN Nigeria",
+    "Cairo, EG • AS8452 Telecom Egypt",
+    "Sao Paulo, BR • AS26615 TIM Brasil",
+    "Rio de Janeiro, BR • AS26615 TIM Brasil",
+    "Johannesburg, ZA • AS36939 Telkom SA",
+    "Kuala Lumpur, MY • AS4788 TMNet",
+    "Helsinki, FI • AS1955 Elisa",
+    "San Francisco, US • AS16509 Amazon AWS",
+    "Berlin, DE • AS3320 Deutsche Telekom",
+    "Madrid, ES • AS12956 Telefonica",
+    "Seoul, KR • AS4766 KT Corp",
+    "Singapore, SG • AS3758 SingNet",
+    "Hong Kong, HK • AS58453 HKT Limited",
+    "Vienna, AT • AS12301 Magenta Telekom",
+    "Brussels, BE • AS3301 Belgacom",
+    "Dublin, IE • AS1563 Eircom",
+    "Jakarta, ID • AS136138 Telkom Indonesia",
+    "Lagos, NG • AS37864 MTN Nigeria",
+    "Cairo, EG • AS8452 Telecom Egypt",
+    "Kuala Lumpur, MY • AS4788 TMNet",
+    "Bangkok, TH • AS38236 AIS",
+    "Hanoi, VN • AS8522 VNPT",
+    "Manila, PH • AS1764 PLDT",
+    "Krakow, PL • AS5603 Orange Polska",
+    "Budapest, HU • AS12956 Magyar Telekom",
+    "Prague, CZ • AS28307 O2 Czech Republic",
+    "Warsaw, PL • AS5603 Orange Polska",
+    "Athens, GR • AS8344 Cosmote",
+    "Lisbon, PT • AS12318 MEO",
+    "Riga, LV • AS12578 Lattelecom",
+    "Vilnius, LT • AS6842 Telia Lietuva",
+    "Tallinn, EE • AS3301 Telia Eesti",
+    "Helsinki, FI • AS1955 Elisa",
+    "Stockholm, SE • AS1257 Telia Company",
+    "Oslo, NO • AS2116 Telenor",
+    "Copenhagen, DK • AS8714 TDC",
+    "Amsterdam, NL • AS1101 SURF",
+    "Brussels, BE • AS3301 Belgacom",
+    "Madrid, ES • AS12956 Telefonica",
+    "Seoul, KR • AS4766 KT Corp",
+    "Tokyo, JP • AS4713 NTT",
+    "Sydney, AU • AS1221 Telstra",
+    "Melbourne, AU • AS4804 Optus",
+    "Auckland, NZ • AS4771 Spark NZ",
+    "Wellington, NZ • AS9500 Vodafone NZ",
+    "Vancouver, CA • AS852 Telus",
+    "Calgary, CA • AS6327 Shaw",
+    "Ottawa, CA • AS812 Rogers",
+    "Edmonton, CA • AS6327 Shaw",
+    "Winnipeg, CA • AS7122 Shaw",
+    "Quebec City, CA • AS5769 Videotron",
+    "Montreal, CA • AS5769 Videotron",
+    "Hamilton, CA • AS12345 Bell Canada",
+    "Halifax, CA • AS6789 Eastlink",
+    "St. John's, CA • AS12345 Bell Canada",
+    "Victoria, CA • AS9876 Telus",
+    "Saskatoon, CA • AS54321 SaskTel",
+    "Regina, CA • AS11223 SaskTel",
+    "Kobe, JP • AS4713 NTT",
+    "Osaka, JP • AS4713 NTT",
+    "Nagoya, JP • AS4713 NTT",
+    "Fukuoka, JP • AS4713 NTT",
+    "San Diego, US • AS20001 Charter",
+    "Austin, US • AS54321 Frontier",
+    "Dallas, US • AS11427 TWC",
+    "Houston, US • AS7018 AT&T",
+    "Phoenix, US • AS209 CenturyLink",
+    "Detroit, US • AS6167 Verizon",
+    "Philadelphia, US • AS7922 Comcast",
+    "Minneapolis, US • AS5650 Frontier",
+    "Salt Lake City, US • AS30036 Mediacom",
+    "Nashville, US • AS7922 Comcast",
+    "Charlotte, US • AS209 CenturyLink",
+    "Indianapolis, US • AS6167 Verizon",
+    "Columbus, US • AS6167 Verizon",
+    "Baltimore, US • AS7922 Comcast",
+    "Cleveland, US • AS6167 Verizon",
+    "Milwaukee, US • AS5650 Frontier",
+    "Kansas City, US • AS11492 Cable One",
+    "Oklahoma City, US • AS7922 Comcast",
+    "Las Vegas, US • AS22773 Cox Communications",
+    "Portland, US • AS7922 Comcast",
+    "Sacramento, US • AS54600 Frontier",
+    "Raleigh, US • AS209 CenturyLink",
+    "Virginia Beach, US • AS7922 Comcast",
+    "Oakland, US • AS16509 Amazon AWS",
+    "Tucson, US • AS209 CenturyLink",
+    "Fresno, US • AS20001 Charter",
+    "Long Beach, US • AS7922 Comcast",
+    "Anchorage, US • AS209 CenturyLink",
+    "Honolulu, US • AS209 CenturyLink",
+    "Santa Ana, US • AS20001 Charter",
+    "Riverside, US • AS5650 Frontier",
+    "Corpus Christi, US • AS6167 Verizon",
+    "Lexington, US • AS5650 Frontier",
+    "Stockton, US • AS54600 Frontier",
+    "St. Louis, US • AS7018 AT&T",
+    "Pittsburgh, US • AS7922 Comcast",
+     "Lima, PE • AS12345 Claro",
+    "Bogotá, CO • AS54321 Claro",
+    "Santiago, CL • AS67890 Movistar",
+    "Quito, EC • AS11223 CNT",
+    "Caracas, VE • AS44556 Digitel",
+    "Lagos, NG • AS37864 MTN Nigeria",
+    "Abuja, NG • AS12345 Glo Nigeria",
+    "Cairo, EG • AS8452 Telecom Egypt",
+    "Cape Town, ZA • AS36939 Telkom SA",
+    "Johannesburg, ZA • AS36939 Telkom SA",
+    "Nairobi, KE • AS37133 Safaricom",
+    "Addis Ababa, ET • AS37674 Ethio Telecom",
+    "Accra, GH • AS37133 Vodafone Ghana",
+    "Algiers, DZ • AS47394 Djezzy",
+    "Riyadh, SA • AS57344 STC",
+    "Dubai, AE • AS37660 Etisalat",
+    "Beirut, LB • AS42994 Ogero",
+    "Amman, JO • AS37828 Zain Jordan",
+    "Muscat, OM • AS35661 Omantel",
+    "Doha, QA • AS37568 Ooredoo",
+    "Kuwait City, KW • AS4788 Zain Kuwait",
+    "Hanoi, VN • AS8522 VNPT",
+    "Ho Chi Minh City, VN • AS8522 VNPT",
+    "Bangkok, TH • AS38236 AIS",
+    "Jakarta, ID • AS136138 Telkom Indonesia",
+    "Manila, PH • AS1764 PLDT",
+    "Singapore, SG • AS3758 SingNet",
+    "Kuala Lumpur, MY • AS4788 TMNet",
+    "Helsinki, FI • AS1955 Elisa",
+    "Stockholm, SE • AS1257 Telia Company",
+    "Oslo, NO • AS2116 Telenor",
+    "Copenhagen, DK • AS8714 TDC",
+    "Vienna, AT • AS12301 Magenta Telekom",
+    "Budapest, HU • AS12956 Magyar Telekom",
+    "Prague, CZ • AS28307 O2 Czech Republic",
+    "Warsaw, PL • AS5603 Orange Polska",
+    "Athens, GR • AS8344 Cosmote",
+    "Lisbon, PT • AS12318 MEO",
+    "Madrid, ES • AS12956 Telefonica",
+    "Barcelona, ES • AS12956 Telefonica",
+    "Valencia, ES • AS12956 Telefonica",
+    "Zagreb, HR • AS34984 Hrvatski Telekom",
+    "Belgrade, RS • AS34307 Telekom Srbija",
+    "Sofia, BG • AS17439 A1 Bulgaria",
+    "Riga, LV • AS12578 Lattelecom",
+    "Vilnius, LT • AS6842 Telia Lietuva",
+    "Tallinn, EE • AS3301 Telia Eesti",
+    "Helsinki, FI • AS1955 Elisa",
+    "Stockholm, SE • AS1257 Telia Company",
+    "Oslo, NO • AS2116 Telenor",
+    "Copenhagen, DK • AS8714 TDC",
+    "Amsterdam, NL • AS1101 SURF",
+    "Brussels, BE • AS3301 Belgacom",
+    "Luxembourg, LU • AS12345 POST Luxembourg",
+    "Reykjavik, IS • AS12345 Vodafone Iceland",
 ]
 JUG_NAMES = [
     "PLAYER • ","PLAYER • ",
@@ -159,7 +440,40 @@ JUG_NAMES = [
     "PLAYER • ","PLAYER • ",
     "PLAYER • ","PLAYER • ",
     "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
     "SERVER • ","BOT • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
+    "PLAYER • ","PLAYER • ",
     "PLAYER • ","PLAYER • ",
     "PLAYER • ","PLAYER • ",
     "PLAYER • ","PLAYER • ",
@@ -187,7 +501,7 @@ def progress(msg, steps=18):
         time.sleep(random.uniform(0.03,0.11))
     print()
 
-# ── PERSISTENCE ───────────────────────────────────────────────────
+
 def load_saved():
     if os.path.exists(SAVE_FILE):
         with open(SAVE_FILE,"r") as f: return json.load(f)
@@ -276,7 +590,7 @@ def inject_player_ips(existing_count=0):
     injected = []
     time.sleep(random.uniform(0.3,0.8))
     for _ in range(count):
-        ip   = fake_ip()
+        ip   = call_ip()
         loc  = random.choice(JUG_LOCS)
         name = random.choice(JUG_NAMES)
         ping = rnd(12,210)
@@ -286,9 +600,8 @@ def inject_player_ips(existing_count=0):
         injected.append({"ip":ip,"player":name,"geo":loc,"ping":ping})
     return injected
 
-# ══════════════════════════════════════════════════════════════════
-#  GAME → IP
-# ══════════════════════════════════════════════════════════════════
+
+
 def game_to_ip():
     while True:
         clr(); draw_banner()
@@ -330,7 +643,7 @@ def game_scan(place_id):
     if not servers:
         print(f"{SP()}  │  {Fore.YELLOW} {RST}")
         for i in range(rnd(3,7)):
-            ip=fake_ip(); ping=rnd(1,9000); play=rnd(1,12); loc=random.choice(JUG_LOCS)
+            ip=call_ip(); ping=rnd(1,9000); play=rnd(1,12); loc=random.choice(JUG_LOCS)
             print(f"{SP()}  │  {AC()}#{i+1:02d}  {WH}{ip}")
             print(f"{SP()}  │      {LGY}Replys:{WH} {play}/12  Ping:{WH} {ping}ms")
             print(f"{SP()}  │      {GY}↳ {LGY}{loc}{RST}")
@@ -338,7 +651,7 @@ def game_scan(place_id):
     else:
         for i,s in enumerate(servers[:10],1):
             try: ip=socket.gethostbyname("gamejoin.roblox.com")
-            except: ip=fake_ip()
+            except: ip=call_ip()
             geo=geoip(ip); gl=geo_line(geo) if geo else random.choice(JUG_LOCS)
             play=s.get("playing","?"); maxp=s.get("maxPlayers","?"); ping=s.get("ping",rnd(20,120))
             print(f"{SP()}  │  {AC()}#{i:02d}  {WH}{ip}")
@@ -430,7 +743,7 @@ def auto_scan():
     if not injected and rnd(1,2)==1:
         
         for _ in range(rnd(4,7)):
-            ip=fake_ip(); loc=random.choice(JUG_LOCS)
+            ip=call_ip(); loc=random.choice(JUG_LOCS)
             name=random.choice(JUG_NAMES); ping=rnd(15,200)
             print(f"{SP()}  │  {AC()}► {WH}{ip}  {GY}[{name}]")
             print(f"{SP()}  │     {GY}↳ {LGY}{loc}  Ping: {ping}ms{RST}")
@@ -495,7 +808,7 @@ def edit_my_ip(cache):
     val=input(f"\n{SP()}  [{AC()}>{SP()}] IP (blank=auto){RST} ▸ ").strip()
     if not val:
         spinner("Connecting to spoofwave.com",2)
-        info=get_my_ip(); val=info.get("ip") or fake_ip(); cache.update(info)
+        info=get_my_ip(); val=info.get("ip") or call_ip(); cache.update(info)
     cache["ip"]=val
     steps=["Validating IP format","Testing Ports","Awaiting DNS&ARP Reply"," Connection ! "]
     print()
@@ -515,7 +828,7 @@ def main():
         if not cache.get("ip"): raise ValueError
         print(f"{LG} OK{RST}")
     except:
-        cache["ip"]=fake_ip(); print(f"{Fore.YELLOW} OFFLINE — {RST}")
+        cache["ip"]=call_ip(); print(f"{Fore.YELLOW} OFFLINE — {RST}")
     time.sleep(0.4)
 
     while True:
